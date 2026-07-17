@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session, select
-from app.database import get_session
-from app.models.city import City, CityMetric
+from database import get_session
+from models.city import City, CityMetric
 router = APIRouter(prefix="/cities", tags=["Cities"])
 @router.get("/")
 def list_cities(session: Session = Depends(get_session)):

@@ -1,8 +1,8 @@
 import csv
 from sqlmodel import Session, select
  
-from app.database import engine
-from app.models.city import City, CityMetric
+from database import engine
+from models.city import City, CityMetric
  
  
 def run_seed():

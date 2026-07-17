@@ -2,12 +2,12 @@ from fastapi import FastAPI
 from sqlmodel import SQLModel
 from sqlalchemy.exc import OperationalError
  
-from app.database import engine
+from database import engine
  
 # Import models so SQLModel registers them
-from app.models.city import City, CityMetric
-from app.models.user import User
-from app.models.comparison import SavedComparison
+from models.city import City, CityMetric
+from models.user import User
+from models.comparison import SavedComparison
  
 from routers import cities, auth, rankings, ai, comparisons
  
