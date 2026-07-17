@@ -1,13 +1,13 @@
 import csv
 from sqlmodel import Session, select
  
-from database import engine
-from models.city import City, CityMetric
+from app.database import engine
+from app.models.city import City, CityMetric
  
  
 def run_seed():
     with Session(engine) as session:
-        with open("seed/cities_seed.csv", newline="", encoding="utf-8") as f:
+        with open("app/seed/cities_seed.csv", newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
  
             for row in reader:
